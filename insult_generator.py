@@ -7,7 +7,7 @@ nouns = ['turnip', 'dog', 'goat', 'monke', 'booger']
 
 #functions
 def printInsult (name, age):
-    print (name + ', you are a ' + age + ' ' + choice(adjectives) + ' ' + choice(nouns))
+    print(name + ', you are a ' + str(age) + ' ' + choice(adjectives) + ' ' + choice(nouns))
     
 
 #program
@@ -22,19 +22,21 @@ if (age < 16):
 else:
     age = 'old'
 
-choice = int(input('1: print insults at your demand\n2: print insults endlessly\n0: exit\n'))
-if(choice == 1):
-    printInsult(name, age)
-    cont = input('Can you handle more (y/n)')
-    while cont != 'n':
+option = 5
+while option != 0:
+    option = int(input('1: print insults at your demand\n2: print insults endlessly\n0: exit\n'))
+    if(option == 1):
         printInsult(name, age)
         cont = input('Can you handle more (y/n)')
-    quit()
-elif(choice == 2):
-    while choice == 2:
-        printInsult(name, age)
-        time.sleep(3)
-elif(choice == 0):
-    quit()
-else:
-    print('not an option, try again')
+        while cont != 'n':
+            printInsult(name, age)
+            cont = input('Can you handle more (y/n)')
+        quit()
+    elif(option == 2):
+        while option == 2:
+            printInsult(name, age)
+            time.sleep(3)
+    elif(option == 0):
+        quit()
+    else:
+        print('not an option, try again\n')
