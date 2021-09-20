@@ -11,18 +11,18 @@ def printInsult (name, age):
     
 
 #program
-name = input('What is your name?')
+name = input('What is your name? ')
 if name == 'paige':
     print('ඞ ඞ ඞ')
     quit()
 
-age = input('How old are you?')
+age = int(input('How old are you? '))
 if (age < 16):
     age = 'young'
 else:
     age = 'old'
 
-choice = input('1: print insults at your demand\n 2: print insults endlessly\n 0: exit')
+choice = int(input('1: print insults at your demand\n2: print insults endlessly\n0: exit\n'))
 if(choice == 1):
     printInsult(name, age)
     cont = input('Can you handle more (y/n)')
